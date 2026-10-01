@@ -6,24 +6,27 @@
 
 A native PS Vita utility for mounting and exporting decrypted trophy data. Its mounting bridge is derived from [VitaShell](https://github.com/TheOfficialFloW/VitaShell); Trophy IO is developed as an independent application and Git repository.
 
-**v0.1.0 is an export-only first build.** Cross-compilation, eight host core tests and four package validation tests have passed. Installation, startup, mounting and export on a physical Vita have **not yet been verified**. Import and encrypted write-back are planned, not available in this version.
+**v0.1.2 is a prerelease test build for all installed-game trophy resources.** It scans `ux0:app`, `gr0:app`, `ux0:patch` and `ux0:rePatch` without filtering game Title ID prefixes, inventories every file under `sce_sys/trophy`, and merges the user trophy `conf` and `data` directories. Unplayed games remain visible as `Game files`; personal data readiness is separate. A dated full-FTP inventory found 254 trophy IDs and 275 game resource files in 308 app/patch directories. The v0.1.1 installation, three individual decrypted exports, and all nine file hashes have been verified on hardware; **v0.1.2 scanning and resource copying still require a device test**. Import and encrypted write-back remain unimplemented.
+
 
 ## Download
 
-[v0.1.0 prerelease](https://github.com/Lariya-aa/trophy-io/releases/tag/v0.1.0) — download the VPK and corresponding source below.
+[v0.1.2 prerelease](https://github.com/Lariya-aa/trophy-io/releases/tag/v0.1.2) — full installed-game trophy scanning and export.
 
 | Artifact | Link |
 | --- | --- |
-| VPK | [TrophyBatchManager-v0.1.0.vpk](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.0/TrophyBatchManager-v0.1.0.vpk) |
-| SHA-256 | [Checksum](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.0/TrophyBatchManager-v0.1.0.vpk.sha256) |
-| Corresponding source | [v0.1.0 source archive](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.0/TrophyBatchManager-v0.1.0-source.tar.gz) |
-| Build evidence | [Metadata](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.0/TrophyBatchManager-v0.1.0-build.json) · [Build log](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.0/TrophyBatchManager-v0.1.0-build.log) |
+| VPK | [TrophyBatchManager-v0.1.2.vpk](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.2/TrophyBatchManager-v0.1.2.vpk) |
+| SHA-256 | [SHA-256](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.2/TrophyBatchManager-v0.1.2.vpk.sha256) |
+| Corresponding source | [Corresponding source](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.2/TrophyBatchManager-v0.1.2-source.tar.gz) |
+| Build evidence | [JSON](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.2/TrophyBatchManager-v0.1.2-build.json) · [Log](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.2/TrophyBatchManager-v0.1.2-build.log) |
 
-Application name: **Trophy IO 0.1**. Title ID: **`TROPIO001`**. The VPK filename retains the original `TrophyBatchManager` name.
+Application: **Trophy IO 0.1.2**. Title ID: **`TROPIO001`**.
 
-The release directory preserves the original VPK and its corresponding source archive. Source hashes in the build metadata describe that archive; project documentation and licensing notices have since been expanded. The `v0.1.0` Git tag records the initial project baseline.
+[Original v0.1.0 prerelease](https://github.com/Lariya-aa/trophy-io/releases/tag/v0.1.0) remains available. VPKs and corresponding source archives are preserved by version. Build metadata describes the immutable source snapshot taken before publication; the release tag also includes updated publication documentation.
 
 ## Features
+
+Scanning automatically saves `ux0:data/trophy_io/catalog-<timer>.json` with complete file paths, source Title IDs, sizes and scan errors. Left/Right changes pages. × exports the selected set; △ exports all readable sets, including original game packages and user configuration files. These resources are streamed unchanged into `resources/`; `resources.json` records source paths, lengths and verified SHA-256 values. Existing personal DAT pairs use the established decrypted export path and `manifest.json`. Shared system metadata is inventoried separately and is not copied as a game export. A package is not a personal trophy record, and the app does not create personal data for unplayed games. A separate scan-provider interface is reserved for savedata; savedata scanning is disabled.
 
 - Enumerate existing NPWR directories under `ur0:user/00/trophy/data/` and display titles from the matching `conf/<NPWR>/TROP.SFM`.
 - Export the selected trophy set or all listed sets through bundled, separately compiled user and kernel mounting modules.
@@ -32,13 +35,13 @@ The release directory preserves the original VPK and its corresponding source ar
 - Publish `manifest.json` after successful unmounting. Partial directories remain for diagnosis; `.pending` manifests are incomplete.
 - Record NPWR, paths, result codes, module NID and mount handles without logging DAT contents or account identifiers.
 
-Limits: **128 trophy sets**, **1 MiB per file**. NPWR checks do not constitute full DAT format validation or account matching. Existing trophy data is opened read-only; output is written to the application's own directory. The app does not update trophy databases, modify plugin configuration or replace VitaShell modules.
+Limits: **dynamic catalogue capacity**, **1 MiB per personal DAT/config read**; game resource files are streamed. NPWR checks do not constitute full DAT format validation or account matching. Existing trophy data is opened read-only; output is written to the application's own directory. The app does not update trophy databases, modify plugin configuration or replace VitaShell modules.
 
 ## Requirements and use
 
 Use an existing homebrew/taiHEN environment with the required permissions. Close games and the trophy application that may be using the selected data before testing an export.
 
-Transfer the VPK to the Vita, install it with VitaShell, then launch **Trophy IO 0.1**. The in-app interface is English; translated READMEs do not change the UI language.
+Transfer the VPK to the Vita, install it with VitaShell, then launch **Trophy IO 0.1.2**. The in-app interface is English; translated READMEs do not change the UI language.
 
 | Button | Action |
 | --- | --- |
@@ -69,8 +72,10 @@ Run from the repository root. Building requires Docker; host tests require Pytho
 ```sh
 sh tools/build.sh
 python3 tests/test_core.py
-python3 tools/verify_vpk.py releases/v0.1.0/TrophyBatchManager-v0.1.0.vpk
-python3 tests/test_package.py releases/v0.1.0/TrophyBatchManager-v0.1.0.vpk
+python3 tests/test_storage.py
+python3 tests/test_catalog.py
+python3 tools/verify_vpk.py releases/v0.1.2/TrophyBatchManager-v0.1.2.vpk --app-version 00.12
+python3 tests/test_package.py releases/v0.1.2/TrophyBatchManager-v0.1.2.vpk --app-version 00.12
 ```
 
 The build script prints the temporary build directory and saves its log there. Substitute the newly built VPK's path to verify a new build. Source is mounted read-only, and container networking is disabled during compilation. The image must be available locally or downloadable by Docker before the container starts.

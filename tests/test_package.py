@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Check the real VPK and reject mutated archives; never execute its binaries."""
 import importlib.util
+import argparse
 from pathlib import Path
 import struct
 import sys
@@ -13,6 +14,7 @@ spec = importlib.util.spec_from_file_location("verify_vpk", ROOT / "tools/verify
 verifier = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(verifier)
 VPK = None
+APP_VERSION = "00.10"
 
 
 class PackageTests(unittest.TestCase):
@@ -23,10 +25,10 @@ class PackageTests(unittest.TestCase):
                 for name in source.namelist():
                     destination.writestr(name, change(name, source.read(name)))
             with self.assertRaises(ValueError):
-                verifier.verify(candidate)
+                verifier.verify(candidate, APP_VERSION)
 
     def test_release_structure_and_minimums(self):
-        report = verifier.verify(VPK)
+        report = verifier.verify(VPK, APP_VERSION)
         self.assertEqual(report["sfo"]["PSP2_SYSTEM_VER"], 0)
         self.assertFalse(report["device_execution_verified"])
         self.assertEqual(len(report["self"]), 3)
@@ -51,7 +53,10 @@ class PackageTests(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        raise SystemExit("Usage: python3 test_package.py /path/to/release.vpk")
-    VPK = Path(sys.argv[1])
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("vpk", type=Path)
+    parser.add_argument("--app-version", default="00.10")
+    args = parser.parse_args()
+    VPK = args.vpk
+    APP_VERSION = args.app_version
     unittest.main(argv=[sys.argv[0]], verbosity=2)

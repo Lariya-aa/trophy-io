@@ -1,0 +1,127 @@
+{
+  "artifact": "TrophyBatchManager-v0.1.1.vpk",
+  "bytes": 70726,
+  "sha256": "0f4083312303bd2765796fab2e649b62c37097758cee73db0f37864cdbf1b443",
+  "entries": [
+    "LICENSE",
+    "THIRD_PARTY.md",
+    "eboot.bin",
+    "sce_module/trophy_kernel.skprx",
+    "sce_module/trophy_user.suprx",
+    "sce_sys/icon0.png",
+    "sce_sys/livearea/contents/bg.png",
+    "sce_sys/livearea/contents/startup.png",
+    "sce_sys/livearea/contents/template.xml",
+    "sce_sys/param.sfo",
+    "third_party/PSPSDK-LICENSE"
+  ],
+  "sfo": {
+    "APP_VER": "00.11",
+    "ATTRIBUTE": 32768,
+    "ATTRIBUTE2": 0,
+    "ATTRIBUTE_MINOR": 16,
+    "BOOT_FILE": "",
+    "CATEGORY": "gd",
+    "CONTENT_ID": "",
+    "EBOOT_APP_MEMSIZE": 0,
+    "EBOOT_ATTRIBUTE": 0,
+    "EBOOT_PHY_MEMSIZE": 0,
+    "LAREA_TYPE": 0,
+    "NP_COMMUNICATION_ID": "",
+    "PARENTAL_LEVEL": 1,
+    "PSP2_DISP_VER": "00.000",
+    "PSP2_SYSTEM_VER": 0,
+    "STITLE": "Trophy IO 0.1.1",
+    "TITLE": "Trophy IO 0.1.1",
+    "TITLE_ID": "TROPIO001",
+    "VERSION": "00.00"
+  },
+  "self": {
+    "eboot.bin": {
+      "bytes": 52828,
+      "sha256": "de83c2f0691af555ff561fff561df6ab7f491b3b025defe83052a2bca227bb7a",
+      "authid": "0x2808000000000000",
+      "minimum_required_firmware": 0
+    },
+    "sce_module/trophy_kernel.skprx": {
+      "bytes": 6065,
+      "sha256": "fab6e7acff4613782afdbe2092c401ef656d642ea9299b83945924f49381d371",
+      "authid": "0x2808000000000000",
+      "minimum_required_firmware": 0
+    },
+    "sce_module/trophy_user.suprx": {
+      "bytes": 4413,
+      "sha256": "a6432525950def85f01139d3b674665f7b6d283a004a476fba440e4d4c7f3533",
+      "authid": "0x2808000000000000",
+      "minimum_required_firmware": 0
+    }
+  },
+  "device_execution_verified": false,
+  "built_on": "2026-10-02",
+  "status": "local_test_candidate",
+  "toolchain_image": "vitasdk/vitasdk:2026.08-20260815",
+  "toolchain_digest": "sha256:7f5eee50ff95b73c8c847dbfef6227aa0035886444b4d0254c21da8369ff1efc",
+  "compiler": "arm-vita-eabi-gcc 15.2.0",
+  "cmake": "3.28",
+  "build_type": "Release",
+  "source_base_commit": "c918534335df21cf3d7746faea05c10d3d02d6ce",
+  "source_worktree_changes": true,
+  "source_files_sha256": {
+    ".gitignore": "cb24da15dc5d2390a20e83f11849ef06ead52550864e35993b8cce6763f44d26",
+    "AGENTS.md": "873de80450a7c3216cabd0a13997ea67281a0e016aeae1469c1865d40d80273d",
+    "CHANGELOG.md": "c4f6e5fc2dfb99f6fee6d9d862d0920a03ce9d6ca5f96fa74bcec71ac4b4db2f",
+    "CMakeLists.txt": "fc9de2498af9f5e40d1f52abd614ddd314808c0da044358f76607e255b23beed",
+    "LICENSE": "cc8d9e517e07489053ef15db5bf78652b30c0490b85fa9d670eb301fe0b10bd5",
+    "NOTICE": "97b6ab52f3027920a95564d76e851f5e7673ef931c2431c535f876d7553a2d8c",
+    "README.ja.md": "702b10442cee887bbab56b71166d7ef6b2ef83c6206ba9583a6dd8788e75e79b",
+    "README.md": "38af51833d5ba9cdc8acae2f4a8e2cbc90581c05bade7ef31a7c8f764a92d814",
+    "README.zh-CN.md": "1614b8f373e19908f602bcbaa6944a8fc86d1c5ee5ce0e63cc248f87484f36ae",
+    "THIRD_PARTY.md": "b039220dab86c06a67f166ca17fbe91ffcd1f6e6d6e74ee324d62a70fb1a1ee8",
+    "agent.md": "a0ea2f80aa577706e0ef83ab2fc3e5e1f0fd5b13209fa8fe16831d4e513fee98",
+    "docs/DESIGN.md": "97ffc7f83479da3a35a2cbb8d45096988886e2c961b8b5ef903b52a06214be14",
+    "docs/PUBLISHING.md": "e4c8b549a23d53b26083c8b16a5b160058b894036065e74232b05728db039fe3",
+    "include/core.h": "103d8fa70f5af68ab5d1e23cef37da8fd6c6dd5f61193dbac93da91a85320b74",
+    "include/mount_api.h": "fa6471d35358a39aa48eb9ff730d8f5dfa7a5296e1dc5b20b24cd0506ef2b8af",
+    "include/screen.h": "64fb263a95596b0c64db5dc9f23016061188949f02249ebb0823823b98ea2c58",
+    "include/sha256.h": "89c3c72c4994d45cc62b77acf657858a62b810aab3c79617a0b452dcfc94711b",
+    "include/storage.h": "e8f34554e1a3b632439f817034cb6f2e3e08db4cd47390dab945a631d7d72fb8",
+    "modules/kernel/CMakeLists.txt": "41ae357de78b3b2925650f88f93025c1027d67d0591a0fb17f3f2200f50f9113",
+    "modules/kernel/exports.yml": "2d0b2f6c7d4812d0990b65155862d1f622f2fe188f92249266530f0fa4f3e25a",
+    "modules/kernel/main.c": "8fe4b4a910cd813dd16887850f13b74620719f3a1a3407ef5d875b91945ecffc",
+    "modules/user/CMakeLists.txt": "6264f3d1d322488d5523fcbd7a0956b6f30282eda2e530ecc1970678b464fa77",
+    "modules/user/exports.yml": "26b434a32b06a48b1006976b4335d610caa0e15d081b6060bb2ea58c2d8f5e38",
+    "modules/user/main.c": "b9ebec1135831bac6eb16b7bc85d8aba26acd353de52983ba2184a3d677b03d2",
+    "sce_sys/icon0.png": "c6981497e22baef6ad597ca46a2e72dd8e75d3303d439e4e58a5c3f151490f4f",
+    "sce_sys/livearea/contents/bg.png": "a2d4facd395ae83708e62d7442fdb391cb2727e14a29f4d745d23bdb240a7fb5",
+    "sce_sys/livearea/contents/startup.png": "7f12567220379cb627d8a3d2abce90ef355d882e12d2df4c193699a34c1bcbd0",
+    "sce_sys/livearea/contents/template.xml": "a9403498431b773a9fb2b592be5d9e2ca31173b27bda23a61aa77c195b511400",
+    "src/core.c": "c4ad42413bc36c22ad86ef8ae4dc9ea7c8e19f69daca2484ee413def567ad603",
+    "src/main.c": "523c01ec635d406203bceeb6ec13725e4221db6bc87172de258448e5b8594dac",
+    "src/screen.c": "93306d0f11c63fe6e00629f52435ced285a1480eaf846210ca844ea6aa806acc",
+    "src/sha256.c": "602344fdde57fc54cfc3099cf0e7b1861216e6b103c3d908eb958317dfe1c8bb",
+    "src/storage.c": "f7846410c62ae9001533d9121874893dbc99abb923bd6ad162d460c799648380",
+    "tests/test_core.py": "91fbe6aebd9e8be10dd2d497a82b3d2b72b20a796df2253280b84b6617740d4e",
+    "tests/test_package.py": "3e600b1988ba04f4b9f48bf3df111a906410fb985bf4428adf766412f7931b91",
+    "tests/test_storage.py": "2d833ac3ec80d5790034ef7c8685a473c484f528c2e2cbb72ff1c2017547a5b5",
+    "third_party/PSPSDK-LICENSE": "2a72b3d563b8e080dd2be9a963f44c8396ca615421833d3cffb6d126101c1c82",
+    "third_party/debugScreenFont.c": "2bffe4bd8cac67101d063c1d64336dfa936ec7411570176ce57baceb302c6bca",
+    "tools/build.sh": "adca2b82f57892dc3eef3a4b50da1eb140e58b18e65eee058573bfa02a6c7b0f",
+    "tools/make_assets.py": "925ab1d6eb3448168b1dcbdee4bcebe281f91c9967fe9ff660527c7438c264c1",
+    "tools/verify_vpk.py": "810f87332aa784d2fa9634c8d7d479910af8340ff5e93bfab7496986cb89efe0"
+  },
+  "source_archive": {
+    "artifact": "TrophyBatchManager-v0.1.1-source.tar.gz",
+    "sha256": "ffd2335f78a7c09a869ad2a7a7c52b0fccd935f505eb1b3eea0ef2d291a58c3b"
+  },
+  "host_core_tests": {
+    "passed": 8
+  },
+  "host_storage_tests": {
+    "passed": 6
+  },
+  "package_tests": {
+    "passed": 4
+  },
+  "import_implemented": false,
+  "github_release_published": false
+}

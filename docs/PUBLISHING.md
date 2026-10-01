@@ -19,3 +19,9 @@ For later builds, create a new version directory and matching source archive rat
 ## Verification
 
 Before publishing, check the staged file list, local documentation links, VPK checksum and corresponding-source hashes. Distinguish host/package checks from device runtime validation in the release notes. Do not publish exported DAT files, account material or private device logs in issues or release assets.
+
+## v0.1.2 publication — 2026-10-02
+
+v0.1.2 is a prerelease for full installed-game trophy scanning and single/all export. The public release and tag include the reviewed source changes, preserved v0.1.1/v0.1.2 build artifacts, and updated multilingual download links. The GitHub Release assets include the unchanged v0.1.2 VPK, checksum, corresponding source snapshot, build records and four license/notice files. The build JSON records the build-time state before publication; its source hashes correspond to the unchanged archive, while the release commit also contains subsequent publication documentation.
+
+v0.1.1 has hardware evidence for three individual exports and nine file hashes. The 254-set FTP inventory is independent source-layout evidence. Neither establishes hardware acceptance of the new v0.1.2 scan or resource-copy flow, which remains pending.

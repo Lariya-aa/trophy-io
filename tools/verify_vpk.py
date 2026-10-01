@@ -24,7 +24,7 @@ def sfo_values(data):
     return result
 
 
-def verify(path):
+def verify(path, app_version="00.10"):
     expected = {"eboot.bin", "sce_sys/param.sfo", "sce_module/trophy_kernel.skprx",
                 "sce_module/trophy_user.suprx", "sce_sys/icon0.png",
                 "sce_sys/livearea/contents/template.xml", "sce_sys/livearea/contents/bg.png",
@@ -37,7 +37,7 @@ def verify(path):
         if archive.testzip() is not None:
             raise ValueError("VPK CRC failure")
         sfo = sfo_values(archive.read("sce_sys/param.sfo"))
-        if sfo["TITLE_ID"] != "TROPIO001" or sfo["APP_VER"] != "00.10" or sfo["PSP2_SYSTEM_VER"] != 0:
+        if sfo["TITLE_ID"] != "TROPIO001" or sfo["APP_VER"] != app_version or sfo["PSP2_SYSTEM_VER"] != 0:
             raise ValueError(f"Unexpected metadata: {sfo}")
         binaries = {}
         for name in ["eboot.bin", "sce_module/trophy_kernel.skprx", "sce_module/trophy_user.suprx"]:
@@ -78,5 +78,6 @@ def verify(path):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("vpk", type=Path)
+    parser.add_argument("--app-version", default="00.10", help="Expected SFO APP_VER; v0.1.1 uses 00.11")
     args = parser.parse_args()
-    print(json.dumps(verify(args.vpk), ensure_ascii=False, indent=2))
+    print(json.dumps(verify(args.vpk, args.app_version), ensure_ascii=False, indent=2))

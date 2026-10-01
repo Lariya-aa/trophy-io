@@ -10,7 +10,7 @@ if docker run --rm --network none -v "$task_source:/workspace:ro" -v "$task_buil
     'cmake -S . -B /build -DCMAKE_BUILD_TYPE=Release && cmake --build /build -j4' \
     >"$task_build/build.log" 2>&1; then
     cat "$task_build/build.log"
-    printf 'VPK: %s/TrophyBatchManager-v0.1.0.vpk\n' "$task_build"
+    printf 'VPK: %s\n' "$task_build"/TrophyBatchManager-*.vpk
 else
     cat "$task_build/build.log"
     exit 1

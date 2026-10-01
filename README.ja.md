@@ -6,24 +6,27 @@
 
 [VitaShell](https://github.com/TheOfficialFloW/VitaShell) のマウントコードを基にした、PS Vita 用のトロフィーデータのマウント・復号済みエクスポートツールです。独立したアプリケーションおよび Git プロジェクトとして開発しています。
 
-**v0.1.0 はエクスポート専用の初期ビルドです。** クロスコンパイル、ホスト側のコアテスト 8 件、パッケージ検証テスト 4 件は完了しています。**実機でのインストール、起動、マウント、エクスポートは未検証です。** インポートと暗号化された書き戻しは今後の計画であり、このバージョンには含まれません。
+**v0.1.2 はインストール済みゲームの全トロフィーリソースを対象とするプレリリースのテスト版です。** `ux0:app`、`gr0:app`、`ux0:patch`、`ux0:rePatch` を Title ID の接頭辞で絞らず走査し、`sce_sys/trophy` 内の全ファイルとユーザーの `conf`・`data` を統合します。未プレイのゲームも `Game files` として表示し、個人データの準備状態は区別します。2026-10-02 の FTP 全体調査では 308 個のアプリ・パッチディレクトリから 254 個のトロフィー ID、275 個のゲームリソースファイルを確認しました。v0.1.1 の実機インストール、3 セットの個別復号エクスポート、9 ファイルのハッシュ一致は確認済みですが、**v0.1.2 の新しい走査とリソースコピーは実機検証待ちです。** インポートと暗号化書き戻しは未実装です。
+
 
 ## ダウンロード
 
-[v0.1.0 プレリリース](https://github.com/Lariya-aa/trophy-io/releases/tag/v0.1.0) から、以下の VPK と対応するソースをダウンロードできます。
+[v0.1.2 プレリリース](https://github.com/Lariya-aa/trophy-io/releases/tag/v0.1.2)：インストール済みゲームの全トロフィーリソース走査とエクスポート。
 
 | ファイル | リンク |
 | --- | --- |
-| VPK | [TrophyBatchManager-v0.1.0.vpk](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.0/TrophyBatchManager-v0.1.0.vpk) |
-| SHA-256 | [チェックサム](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.0/TrophyBatchManager-v0.1.0.vpk.sha256) |
-| 対応するソース | [v0.1.0 ソースアーカイブ](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.0/TrophyBatchManager-v0.1.0-source.tar.gz) |
-| ビルド記録 | [メタデータ](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.0/TrophyBatchManager-v0.1.0-build.json) · [ビルドログ](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.0/TrophyBatchManager-v0.1.0-build.log) |
+| VPK | [TrophyBatchManager-v0.1.2.vpk](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.2/TrophyBatchManager-v0.1.2.vpk) |
+| SHA-256 | [SHA-256](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.2/TrophyBatchManager-v0.1.2.vpk.sha256) |
+| 対応ソース | [対応ソース](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.2/TrophyBatchManager-v0.1.2-source.tar.gz) |
+| ビルド記録 | [JSON](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.2/TrophyBatchManager-v0.1.2-build.json) · [Log](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.2/TrophyBatchManager-v0.1.2-build.log) |
 
-アプリ名は **Trophy IO 0.1**、Title ID は **`TROPIO001`** です。VPK のファイル名には当初の `TrophyBatchManager` という名前を使用しています。
+アプリ名：**Trophy IO 0.1.2**。Title ID：**`TROPIO001`**。
 
-リリースディレクトリには最初の VPK と対応するソースアーカイブを保存しています。ビルド記録のソースハッシュはそのアーカイブに対応します。プロジェクト文書とライセンス表記は、その後このリポジトリで補足しています。Git タグ `v0.1.0` は独立プロジェクトの初期状態を記録しています。
+[初期 v0.1.0 プレリリース](https://github.com/Lariya-aa/trophy-io/releases/tag/v0.1.0) も引き続き利用できます。各版の VPK と対応ソースは元のバイト列を保存します。ビルド記録は公開前のソーススナップショットに対応し、公開タグには更新済みの公開文書も含まれます。
 
 ## 機能
+
+走査後は `ux0:data/trophy_io/catalog-<timer>.json` に全パス、元 Title ID、サイズ、走査エラーを保存します。左右でページを切り替え、× は選択したセット、△ は読み取り可能な全セットをエクスポートします。ゲームの元トロフィーパッケージとユーザー設定は変更せず `resources/` にストリームコピーし、`resources.json` に元パス、サイズ、読み戻し検証済み SHA-256 を記録します。既存の個人 DAT ペアには従来の復号エクスポートと `manifest.json` を使います。共有システムメタデータは一覧に含めますがゲームとしてコピーしません。元パッケージは個人の進捗ではなく、未プレイの個人データは生成しません。セーブデータ用の独立 provider インターフェースは予約済みですが、走査は無効です。
 
 - `ur0:user/00/trophy/data/` 内に実在する NPWR ディレクトリを列挙し、対応する `conf/<NPWR>/TROP.SFM` からタイトルを表示します。
 - 同梱の独自ビルドしたユーザー／カーネルモジュールでマウントし、選択したセットまたは一覧の全セットをエクスポートします。
@@ -32,13 +35,13 @@
 - アンマウント成功後に `manifest.json` を公開します。失敗した出力は診断用に残り、`.pending` マニフェストは未完了を示します。
 - NPWR、パス、結果コード、モジュール NID、マウントハンドルをログに記録します。DAT の内容やアカウント識別子は記録しません。
 
-上限は **128 セット、1 ファイルあたり 1 MiB** です。NPWR の確認は DAT 全体の形式検証やアカウント照合を意味しません。元のトロフィーファイルは読み取り専用で開き、出力はアプリ専用ディレクトリに保存します。トロフィーデータベースやプラグイン設定を変更せず、VitaShell のモジュールも置き換えません。
+上限は **動的に拡張する一覧、個人 DAT・設定の読み込みは 1 ファイルあたり 1 MiB**。ゲームリソースはストリームコピー です。NPWR の確認は DAT 全体の形式検証やアカウント照合を意味しません。元のトロフィーファイルは読み取り専用で開き、出力はアプリ専用ディレクトリに保存します。トロフィーデータベースやプラグイン設定を変更せず、VitaShell のモジュールも置き換えません。
 
 ## 動作環境と使い方
 
 必要な権限を持つ既存の homebrew/taiHEN 環境が必要です。エクスポートのテスト前に、対象データを使用する可能性があるゲームとトロフィーアプリを終了してください。
 
-VPK を Vita に転送し、VitaShell でインストールして **Trophy IO 0.1** を起動します。アプリの UI は英語です。README の翻訳は UI の多言語対応を意味しません。
+VPK を Vita に転送し、VitaShell でインストールして **Trophy IO 0.1.2** を起動します。アプリの UI は英語です。README の翻訳は UI の多言語対応を意味しません。
 
 | ボタン | 操作 |
 | --- | --- |
@@ -69,8 +72,10 @@ ux0:data/trophy_io/
 ```sh
 sh tools/build.sh
 python3 tests/test_core.py
-python3 tools/verify_vpk.py releases/v0.1.0/TrophyBatchManager-v0.1.0.vpk
-python3 tests/test_package.py releases/v0.1.0/TrophyBatchManager-v0.1.0.vpk
+python3 tests/test_storage.py
+python3 tests/test_catalog.py
+python3 tools/verify_vpk.py releases/v0.1.2/TrophyBatchManager-v0.1.2.vpk --app-version 00.12
+python3 tests/test_package.py releases/v0.1.2/TrophyBatchManager-v0.1.2.vpk --app-version 00.12
 ```
 
 ビルドスクリプトは一時ビルドディレクトリを表示し、そこにログを保存します。新しいビルドを検証する場合は、その VPK のパスに置き換えてください。コンパイル中はソースを読み取り専用でマウントし、コンテナのネットワークを無効にします。コンテナ起動前に Docker イメージがローカルに存在するか、Docker がダウンロードできる必要があります。

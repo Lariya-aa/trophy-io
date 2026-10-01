@@ -1,0 +1,51 @@
+-- The C compiler identification is GNU 15.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/local/vitasdk/bin/arm-vita-eabi-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done (0.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /build
+[  4%] Building C object modules/kernel/CMakeFiles/trophy_kernel.dir/main.c.obj
+[  8%] Building C object modules/kernel/CMakeFiles/trophy_kernel.dir/__/__/src/core.c.obj
+[ 12%] Linking C executable trophy_kernel
+[ 12%] Built target trophy_kernel
+[ 20%] Converting to Sony ELF trophy_kernel.velf
+[ 20%] Generating imports YAML for trophy_kernel
+[ 25%] Built target trophy_kernel-velf
+[ 25%] Building stubs trophy_kernel_stubs
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+[ 29%] Creating SELF trophy_kernel.skprx
+[ 29%] Built target trophy_kernel.skprx-self
+[ 29%] Built target trophy_kernel_stubs
+[ 29%] Built target libTrophyIOKernel_stub_weak.a
+[ 29%] Built target libTrophyIOKernel_stub.a
+[ 33%] Building C object modules/user/CMakeFiles/trophy_user.dir/main.c.obj
+[ 37%] Linking C executable trophy_user
+[ 37%] Built target trophy_user
+[ 45%] Generating imports YAML for trophy_user
+[ 45%] Converting to Sony ELF trophy_user.velf
+[ 50%] Building stubs trophy_user_stubs
+[ 50%] Built target trophy_user-velf
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+[ 54%] Creating SELF trophy_user.suprx
+[ 54%] Built target trophy_user.suprx-self
+[ 54%] Built target trophy_user_stubs
+[ 54%] Built target libTrophyIOUser_stub.a
+[ 54%] Built target libTrophyIOUser_stub_weak.a
+[ 70%] Building C object CMakeFiles/trophy_io.dir/src/screen.c.obj
+[ 70%] Building C object CMakeFiles/trophy_io.dir/src/core.c.obj
+[ 70%] Building C object CMakeFiles/trophy_io.dir/src/sha256.c.obj
+[ 70%] Building C object CMakeFiles/trophy_io.dir/src/main.c.obj
+[ 75%] Building C object CMakeFiles/trophy_io.dir/src/storage.c.obj
+[ 79%] Building C object CMakeFiles/trophy_io.dir/src/catalog.c.obj
+[ 83%] Linking C executable trophy_io
+[ 83%] Built target trophy_io
+[ 87%] Converting to Sony ELF trophy_io.velf
+[ 87%] Built target trophy_io-velf
+[ 91%] Creating SELF eboot.bin
+[ 91%] Built target eboot.bin-self
+[ 95%] Generating param.sfo for TrophyBatchManager-v0.1.2.vpk
+[100%] Building vpk TrophyBatchManager-v0.1.2.vpk
+[100%] Built target TrophyBatchManager-v0.1.2.vpk-vpk
