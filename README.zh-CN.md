@@ -10,12 +10,14 @@ PS Vita 原生奖杯挂载与明文导出工具，挂载桥改编自 [VitaShell]
 
 ## 下载
 
+[v0.1.0 预发布版本](https://github.com/Lariya-aa/trophy-io/releases/tag/v0.1.0)，可直接下载下方 VPK 与对应源码。
+
 | 制品 | 入口 |
 | --- | --- |
-| VPK | [TrophyBatchManager-v0.1.0.vpk](releases/v0.1.0/TrophyBatchManager-v0.1.0.vpk) |
-| SHA-256 | [校验值](releases/v0.1.0/TrophyBatchManager-v0.1.0.vpk.sha256) |
-| 对应源码 | [v0.1.0 源码归档](releases/v0.1.0/TrophyBatchManager-v0.1.0-source.tar.gz) |
-| 构建证据 | [元数据](releases/v0.1.0/TrophyBatchManager-v0.1.0-build.json) · [构建日志](releases/v0.1.0/TrophyBatchManager-v0.1.0-build.log) |
+| VPK | [TrophyBatchManager-v0.1.0.vpk](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.0/TrophyBatchManager-v0.1.0.vpk) |
+| SHA-256 | [校验值](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.0/TrophyBatchManager-v0.1.0.vpk.sha256) |
+| 对应源码 | [v0.1.0 源码归档](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.0/TrophyBatchManager-v0.1.0-source.tar.gz) |
+| 构建证据 | [元数据](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.0/TrophyBatchManager-v0.1.0-build.json) · [构建日志](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.0/TrophyBatchManager-v0.1.0-build.log) |
 
 气泡名称：**Trophy IO 0.1**；Title ID：**`TROPIO001`**。VPK 文件名保留最初的 `TrophyBatchManager` 名称。
 

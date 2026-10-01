@@ -1,11 +1,12 @@
 # 版本记录
 
-## 未发布 — GitHub 准备
+## 项目主页与 GitHub 发布 — 2026-10-01
 
 - 英文项目主页，中文与日文 README，以及三语互相切换入口。
 - 明确沿用 VitaShell 的 GPL-3.0-or-later，保留 BSD 字库声明；补充 NOTICE、复用范围及两份改编源码的作者/修改日期声明。
 - 增加 GitHub 发布说明；首版 VPK、对应源码归档与 `v0.1.0` 标签保持不变，运行功能没有修改。
-- 核对关联账户后，在 `Lariya-aa/trophy-io` 建立公开仓库并上传项目；GitHub Release 与实机验收单独记录。
+- 核对关联账户后，在 `Lariya-aa/trophy-io` 建立公开仓库并上传项目。
+- 发布 [v0.1.0 预发布版本](https://github.com/Lariya-aa/trophy-io/releases/tag/v0.1.0)，提供首版 VPK、校验值、对应源码、构建证据及许可证附件；三语 README 改为直接下载入口。实机验收尚未完成。
 
 ## v0.1.0 — 2026-10-01
 

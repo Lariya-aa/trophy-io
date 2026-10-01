@@ -10,12 +10,14 @@
 
 ## ダウンロード
 
+[v0.1.0 プレリリース](https://github.com/Lariya-aa/trophy-io/releases/tag/v0.1.0) から、以下の VPK と対応するソースをダウンロードできます。
+
 | ファイル | リンク |
 | --- | --- |
-| VPK | [TrophyBatchManager-v0.1.0.vpk](releases/v0.1.0/TrophyBatchManager-v0.1.0.vpk) |
-| SHA-256 | [チェックサム](releases/v0.1.0/TrophyBatchManager-v0.1.0.vpk.sha256) |
-| 対応するソース | [v0.1.0 ソースアーカイブ](releases/v0.1.0/TrophyBatchManager-v0.1.0-source.tar.gz) |
-| ビルド記録 | [メタデータ](releases/v0.1.0/TrophyBatchManager-v0.1.0-build.json) · [ビルドログ](releases/v0.1.0/TrophyBatchManager-v0.1.0-build.log) |
+| VPK | [TrophyBatchManager-v0.1.0.vpk](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.0/TrophyBatchManager-v0.1.0.vpk) |
+| SHA-256 | [チェックサム](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.0/TrophyBatchManager-v0.1.0.vpk.sha256) |
+| 対応するソース | [v0.1.0 ソースアーカイブ](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.0/TrophyBatchManager-v0.1.0-source.tar.gz) |
+| ビルド記録 | [メタデータ](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.0/TrophyBatchManager-v0.1.0-build.json) · [ビルドログ](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.0/TrophyBatchManager-v0.1.0-build.log) |
 
 アプリ名は **Trophy IO 0.1**、Title ID は **`TROPIO001`** です。VPK のファイル名には当初の `TrophyBatchManager` という名前を使用しています。
 

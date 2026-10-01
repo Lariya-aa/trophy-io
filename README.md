@@ -10,12 +10,14 @@ A native PS Vita utility for mounting and exporting decrypted trophy data. Its m
 
 ## Download
 
+[v0.1.0 prerelease](https://github.com/Lariya-aa/trophy-io/releases/tag/v0.1.0) — download the VPK and corresponding source below.
+
 | Artifact | Link |
 | --- | --- |
-| VPK | [TrophyBatchManager-v0.1.0.vpk](releases/v0.1.0/TrophyBatchManager-v0.1.0.vpk) |
-| SHA-256 | [Checksum](releases/v0.1.0/TrophyBatchManager-v0.1.0.vpk.sha256) |
-| Corresponding source | [v0.1.0 source archive](releases/v0.1.0/TrophyBatchManager-v0.1.0-source.tar.gz) |
-| Build evidence | [Metadata](releases/v0.1.0/TrophyBatchManager-v0.1.0-build.json) · [Build log](releases/v0.1.0/TrophyBatchManager-v0.1.0-build.log) |
+| VPK | [TrophyBatchManager-v0.1.0.vpk](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.0/TrophyBatchManager-v0.1.0.vpk) |
+| SHA-256 | [Checksum](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.0/TrophyBatchManager-v0.1.0.vpk.sha256) |
+| Corresponding source | [v0.1.0 source archive](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.0/TrophyBatchManager-v0.1.0-source.tar.gz) |
+| Build evidence | [Metadata](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.0/TrophyBatchManager-v0.1.0-build.json) · [Build log](https://github.com/Lariya-aa/trophy-io/releases/download/v0.1.0/TrophyBatchManager-v0.1.0-build.log) |
 
 Application name: **Trophy IO 0.1**. Title ID: **`TROPIO001`**. The VPK filename retains the original `TrophyBatchManager` name.
 
