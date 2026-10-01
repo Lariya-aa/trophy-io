@@ -2,6 +2,8 @@
 
 **English** · [简体中文](README.zh-CN.md) · [日本語](README.ja.md)
 
+[GitHub repository](https://github.com/Lariya-aa/trophy-io)
+
 A native PS Vita utility for mounting and exporting decrypted trophy data. Its mounting bridge is derived from [VitaShell](https://github.com/TheOfficialFloW/VitaShell); Trophy IO is developed as an independent application and Git repository.
 
 **v0.1.0 is an export-only first build.** Cross-compilation, eight host core tests and four package validation tests have passed. Installation, startup, mounting and export on a physical Vita have **not yet been verified**. Import and encrypted write-back are planned, not available in this version.

@@ -2,6 +2,8 @@
 
 [English](README.md) · **简体中文** · [日本語](README.ja.md)
 
+[GitHub 仓库](https://github.com/Lariya-aa/trophy-io)
+
 PS Vita 原生奖杯挂载与明文导出工具，挂载桥改编自 [VitaShell](https://github.com/TheOfficialFloW/VitaShell)，作为独立应用和 Git 项目开发。
 
 **v0.1.0 是仅支持导出的第一版。** 已完成交叉编译、8 项主机核心测试与 4 项包验证测试；**尚未完成实机安装、启动、挂载或导出验证**。导入与加密写回属于后续计划，本版未提供。

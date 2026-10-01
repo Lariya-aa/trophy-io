@@ -8,7 +8,7 @@ Publish this independent repository, including its source, build scripts, licens
 
 The existing `releases/v0.1.0/` files preserve the original build evidence. Its build log records a local temporary build directory; no account identifiers, credentials, raw trophy samples or databases are included. The source archive and VPK hashes are recorded in the accompanying metadata. Git commit author/committer metadata will also be part of the published history.
 
-The repository has no configured remote. Add the chosen GitHub repository URL before pushing `main` and `v0.1.0`; repository owner, name and visibility are not assumed by this project. No remote repository was created during documentation preparation.
+The public GitHub repository is [Lariya-aa/trophy-io](https://github.com/Lariya-aa/trophy-io). The associated account has the display name Lariya and login `Lariya-aa`; the connector and local GitHub CLI identities were checked before creating it on 2026-10-01. The local `origin` uses `https://github.com/Lariya-aa/trophy-io.git`. Publication includes `main` and the original `v0.1.0` tag; it does not establish hardware validation or a GitHub Release.
 
 ## Binary releases
 
