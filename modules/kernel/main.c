@@ -2,7 +2,21 @@
  * Mount bridge derived from VitaShell, Copyright (C) 2015-2018 TheFloW.
  * SPDX-License-Identifier: GPL-3.0-or-later
  * Source: 81af70971ba18b8ce86215b04180f1e3d21cdfc9/modules/kernel/main.c
- * Only trophy mounting remains; no USB, storage redirection or RIF key APIs.
+ * Modified for Trophy IO on 2026-10-01: fixed trophy paths, validated
+ * requests and checked interface/mount results. Unrelated APIs removed.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 #include <psp2kern/kernel/cpu.h>
 #include <psp2kern/kernel/modulemgr.h>

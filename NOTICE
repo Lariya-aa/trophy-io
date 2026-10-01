@@ -1,0 +1,33 @@
+Trophy IO
+SPDX-License-Identifier: GPL-3.0-or-later
+
+Trophy IO is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Trophy IO is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE
+for the complete GNU General Public License.
+
+VitaShell-derived mounting bridge and user-module wrapper:
+Copyright (C) 2015-2018, TheFloW
+Source: https://github.com/TheOfficialFloW/VitaShell
+Commit: 81af70971ba18b8ce86215b04180f1e3d21cdfc9
+
+Modified for Trophy IO on 2026-10-01: independent module names and
+Title ID; fixed trophy paths; validated NPWR requests; checked interface
+resolution, parameter copying and mount results; removed unrelated USB,
+storage-redirection and RIF-key APIs. See modules/kernel/main.c and
+modules/user/main.c. Original GPL-3.0-or-later terms remain in effect.
+
+The debug font is third-party BSD-3-Clause code. Its original copyright,
+conditions and disclaimer are preserved in third_party/debugScreenFont.c
+and third_party/PSPSDK-LICENSE. These original terms are not replaced by
+the application's GPL notice.
+
+See THIRD_PARTY.md for source references and the scope of each dependency.
+The v0.1.0 VPK is accompanied by its corresponding source archive in
+releases/v0.1.0/. That archive remains the original build snapshot;
+these dated notices also describe the modifications in that release.

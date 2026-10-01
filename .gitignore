@@ -5,6 +5,7 @@ __pycache__/
 *.py[cod]
 .DS_Store
 ._*
+.smbdelete*
 *.log
 *.vpk
 *.skprx
