@@ -1,0 +1,26 @@
+/build/
+/build-host/
+/dist/
+__pycache__/
+*.py[cod]
+.DS_Store
+._*
+*.log
+*.vpk
+*.skprx
+*.suprx
+*.velf
+*.elf
+*.bin
+*.o
+*.obj
+*.a
+*.tar.gz
+*.DAT
+*.db
+.env
+.env.*
+# Reviewed release artifacts are versioned, unlike generated build output.
+!/releases/*/*.vpk
+!/releases/*/*.log
+!/releases/*/*.tar.gz

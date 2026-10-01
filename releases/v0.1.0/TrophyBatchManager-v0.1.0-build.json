@@ -1,0 +1,131 @@
+{
+  "artifact": "TrophyBatchManager-v0.1.0.vpk",
+  "bytes": 69153,
+  "sha256": "0fc8603c2c5e7469201b8f616b25408695f78f8abbfe37448d0459bd0fe5bf39",
+  "entries": [
+    "LICENSE",
+    "THIRD_PARTY.md",
+    "eboot.bin",
+    "sce_module/trophy_kernel.skprx",
+    "sce_module/trophy_user.suprx",
+    "sce_sys/icon0.png",
+    "sce_sys/livearea/contents/bg.png",
+    "sce_sys/livearea/contents/startup.png",
+    "sce_sys/livearea/contents/template.xml",
+    "sce_sys/param.sfo",
+    "third_party/PSPSDK-LICENSE"
+  ],
+  "sfo": {
+    "APP_VER": "00.10",
+    "ATTRIBUTE": 32768,
+    "ATTRIBUTE2": 0,
+    "ATTRIBUTE_MINOR": 16,
+    "BOOT_FILE": "",
+    "CATEGORY": "gd",
+    "CONTENT_ID": "",
+    "EBOOT_APP_MEMSIZE": 0,
+    "EBOOT_ATTRIBUTE": 0,
+    "EBOOT_PHY_MEMSIZE": 0,
+    "LAREA_TYPE": 0,
+    "NP_COMMUNICATION_ID": "",
+    "PARENTAL_LEVEL": 1,
+    "PSP2_DISP_VER": "00.000",
+    "PSP2_SYSTEM_VER": 0,
+    "STITLE": "Trophy IO 0.1",
+    "TITLE": "Trophy IO 0.1",
+    "TITLE_ID": "TROPIO001",
+    "VERSION": "00.00"
+  },
+  "self": {
+    "eboot.bin": {
+      "bytes": 52298,
+      "sha256": "593e2099de0dbda39145138e442ac924095aa4878cc21908dc2bc654744bf7e4",
+      "authid": "0x2808000000000000",
+      "minimum_required_firmware": 0
+    },
+    "sce_module/trophy_kernel.skprx": {
+      "bytes": 6065,
+      "sha256": "fab6e7acff4613782afdbe2092c401ef656d642ea9299b83945924f49381d371",
+      "authid": "0x2808000000000000",
+      "minimum_required_firmware": 0
+    },
+    "sce_module/trophy_user.suprx": {
+      "bytes": 4413,
+      "sha256": "a6432525950def85f01139d3b674665f7b6d283a004a476fba440e4d4c7f3533",
+      "authid": "0x2808000000000000",
+      "minimum_required_firmware": 0
+    }
+  },
+  "device_execution_verified": false,
+  "built_on": "2026-10-01",
+  "toolchain_image": "vitasdk/vitasdk:2026.08-20260815",
+  "toolchain_digest": "sha256:7f5eee50ff95b73c8c847dbfef6227aa0035886444b4d0254c21da8369ff1efc",
+  "compiler": "arm-vita-eabi-gcc 15.2.0",
+  "build_type": "Release",
+  "cmake": "3.28",
+  "capabilities": [
+    "enumerate",
+    "export_current",
+    "export_all",
+    "sha256_readback",
+    "diagnostics"
+  ],
+  "import_implemented": false,
+  "host_core_tests": {
+    "passed": 8,
+    "scope": [
+      "NPWR identity and path restrictions",
+      "ciphertext/truncated/mixed title rejection",
+      "XML bounds",
+      "SHA-256 known vectors and padding boundaries",
+      "short write handling",
+      "write failure/zero progress",
+      "oversized callback return rejection"
+    ]
+  },
+  "source_files_sha256": {
+    ".gitignore": "e60d50d8d92f65e552384accb32597eedf70751d96d194d7fbc5862d5cfa225e",
+    "CMakeLists.txt": "3afdb0378d8302068374d5814b2f486451eed50c856f0778a0baa6be23865dad",
+    "LICENSE": "cc8d9e517e07489053ef15db5bf78652b30c0490b85fa9d670eb301fe0b10bd5",
+    "README.md": "18f937043c8809dd4553066a2c69cc413b3619da465b94d7912908cb1d534c42",
+    "THIRD_PARTY.md": "64257a1bbd18f0b221d7a1bab49209b210ba40c33a83bc5cf3653ff681bd92f1",
+    "include/core.h": "103d8fa70f5af68ab5d1e23cef37da8fd6c6dd5f61193dbac93da91a85320b74",
+    "include/mount_api.h": "fa6471d35358a39aa48eb9ff730d8f5dfa7a5296e1dc5b20b24cd0506ef2b8af",
+    "include/screen.h": "64fb263a95596b0c64db5dc9f23016061188949f02249ebb0823823b98ea2c58",
+    "include/sha256.h": "89c3c72c4994d45cc62b77acf657858a62b810aab3c79617a0b452dcfc94711b",
+    "modules/kernel/CMakeLists.txt": "41ae357de78b3b2925650f88f93025c1027d67d0591a0fb17f3f2200f50f9113",
+    "modules/kernel/exports.yml": "2d0b2f6c7d4812d0990b65155862d1f622f2fe188f92249266530f0fa4f3e25a",
+    "modules/kernel/main.c": "32d0436658bfdd094cec975fd1e8384aadbaeaa554b1ba5ba774f2fc340d00da",
+    "modules/user/CMakeLists.txt": "6264f3d1d322488d5523fcbd7a0956b6f30282eda2e530ecc1970678b464fa77",
+    "modules/user/exports.yml": "26b434a32b06a48b1006976b4335d610caa0e15d081b6060bb2ea58c2d8f5e38",
+    "modules/user/main.c": "e30c3f1ab38c75769eda4ff2a5d01a957c02b4095a2ee4738f81ea71a9ea7319",
+    "sce_sys/icon0.png": "c6981497e22baef6ad597ca46a2e72dd8e75d3303d439e4e58a5c3f151490f4f",
+    "sce_sys/livearea/contents/bg.png": "a2d4facd395ae83708e62d7442fdb391cb2727e14a29f4d745d23bdb240a7fb5",
+    "sce_sys/livearea/contents/startup.png": "7f12567220379cb627d8a3d2abce90ef355d882e12d2df4c193699a34c1bcbd0",
+    "sce_sys/livearea/contents/template.xml": "a9403498431b773a9fb2b592be5d9e2ca31173b27bda23a61aa77c195b511400",
+    "src/core.c": "c4ad42413bc36c22ad86ef8ae4dc9ea7c8e19f69daca2484ee413def567ad603",
+    "src/main.c": "27430c7aacc677f71c036f75bc078b55e892b173076f175b54af111c8c7e6362",
+    "src/screen.c": "93306d0f11c63fe6e00629f52435ced285a1480eaf846210ca844ea6aa806acc",
+    "src/sha256.c": "602344fdde57fc54cfc3099cf0e7b1861216e6b103c3d908eb958317dfe1c8bb",
+    "tests/test_core.py": "91fbe6aebd9e8be10dd2d497a82b3d2b72b20a796df2253280b84b6617740d4e",
+    "tests/test_package.py": "42d5ff86626905e1c26a84b62e25538b82337c68f162fb159857c58964f8c1b5",
+    "third_party/PSPSDK-LICENSE": "2a72b3d563b8e080dd2be9a963f44c8396ca615421833d3cffb6d126101c1c82",
+    "third_party/debugScreenFont.c": "2bffe4bd8cac67101d063c1d64336dfa936ec7411570176ce57baceb302c6bca",
+    "tools/build.sh": "36ad7d5f532f207c11413ebe44708890f0c9eeb5516fdead885965ba38877612",
+    "tools/make_assets.py": "925ab1d6eb3448168b1dcbdee4bcebe281f91c9967fe9ff660527c7438c264c1",
+    "tools/verify_vpk.py": "aa7b878e9fbd0018b012db5a0db5006ba20046ea0f2f1f2d4dab1bb56ad68f08"
+  },
+  "source_archive": {
+    "name": "TrophyBatchManager-v0.1.0-source.tar.gz",
+    "sha256": "7880a2b21847c2f981bd1eb2b667bfcbb3f24f1588381e911f3b2c21f1984628"
+  },
+  "package_tests": {
+    "passed": 4,
+    "scope": [
+      "real release structure",
+      "changed Title ID rejection",
+      "corrupt SELF rejection",
+      "raised minimum firmware rejection"
+    ]
+  }
+}
